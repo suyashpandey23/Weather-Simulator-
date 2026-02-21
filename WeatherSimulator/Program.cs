@@ -24,11 +24,31 @@
             {
                 Console.WriteLine($"Day {temperature.IndexOf(temp)+1}: Temperature: {temp}°C, Condition: {weatherCondition[temperature.IndexOf(temp)]}");
             }
-
+            // this is the standard way to use the inbuilt functions to get the max and min values from the list
             Console.WriteLine(@"the max temperature over the simulated days is: "+temperature.Max()+"°C");
             Console.WriteLine(@"the min temperature over the simulated days is-: "+temperature.Min()+"°C");
+            int mintemp = temperature[0];
+            int maxtemp = temperature[0];
+            void ownmethodtogetminmax()
+            {
+                for(int i=1; i<temperature.Count; i++)
+                {
+                    if(temperature[i]<mintemp)
+                    {
+                        mintemp=temperature[i];
+                    }
+                    if(temperature[i]>maxtemp)
+                    {
+                        maxtemp=temperature[i];
+                    }
+                }   
+            }
+            ownmethodtogetminmax();
+            Console.WriteLine(@"own method -the max temperature over the simulated days is: "+maxtemp+"°C");
+            Console.WriteLine(@"own method -the min temperature over the simulated days is-: "+mintemp+"°C");
+            
             double averageTemp=getavg(temperature);
-            Console.WriteLine(@"the average temperature over the simulated days is: "+averageTemp+"°C");
+            Console.WriteLine(@"the average temperature over the simulated days is: "+averageTemp+"°C");    
         }   
         static double getavg(List<int> temp)
         {
