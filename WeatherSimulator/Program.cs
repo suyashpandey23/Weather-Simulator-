@@ -17,7 +17,7 @@
             Random random=new Random();
             for (int i = 0; i < days; i++)
             {
-                temperature.Add(random.Next(-10,35));
+                temperature.Add(random.Next(-10,35)); 
                 weatherCondition.Add(conditions[random.Next(conditions.Count)]);
             }
             foreach(int temp in temperature)
