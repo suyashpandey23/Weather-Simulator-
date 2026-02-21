@@ -48,7 +48,8 @@
             Console.WriteLine(@"own method -the min temperature over the simulated days is-: "+mintemp+"°C");
             
             double averageTemp=getavg(temperature);
-            Console.WriteLine(@"the average temperature over the simulated days is: "+averageTemp+"°C");    
+            Console.WriteLine(@"the average temperature over the simulated days is: "+averageTemp+"°C");   
+            mostcommonconcondition(weatherCondition);
         }   
         static double getavg(List<int> temp)
         {
@@ -59,6 +60,26 @@
             }
 
             return sum / temp.Count;
+        }
+
+        static void mostcommonconcondition(List<string> weatherCondition)
+        {
+            Dictionary<string,int> mpp=new Dictionary<string, int>();
+            foreach (string c in weatherCondition)
+            { 
+                mpp[c]=mpp.GetValueOrDefault(c,0)+1;
+            }
+            string mostCommonCondition = null;
+            int val=0;
+            foreach (KeyValuePair<string, int> kvp in mpp)
+            {
+                if (kvp.Value > val)
+                {
+                    val=kvp.Value;
+                    mostCommonCondition = kvp.Key;
+                }
+            }
+            Console.WriteLine(@"the most common weather condition over the simulated days is: "+mostCommonCondition);
         }
     }
 }
