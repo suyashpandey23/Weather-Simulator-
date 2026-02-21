@@ -1,0 +1,20 @@
+# Build results
+bin/
+obj/
+
+# IDE specific files
+.vs/
+.idea/
+*.user
+*.suo
+*.sln.iml
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Runtime files
+*.dll
+*.pdb
+*.exe
+
