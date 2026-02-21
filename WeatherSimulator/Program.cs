@@ -26,7 +26,7 @@
             }
 
             Console.WriteLine(@"the max temperature over the simulated days is: "+temperature.Max()+"°C");
-            Console.WriteLine(@"the min temperature over the simulated days is: "+temperature.Min()+"°C");
+            Console.WriteLine(@"the min temperature over the simulated days is-: "+temperature.Min()+"°C");
             double averageTemp=getavg(temperature);
             Console.WriteLine(@"the average temperature over the simulated days is: "+averageTemp+"°C");
         }   
