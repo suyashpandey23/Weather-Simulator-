@@ -24,6 +24,9 @@
             {
                 Console.WriteLine($"Day {temperature.IndexOf(temp)+1}: Temperature: {temp}°C, Condition: {weatherCondition[temperature.IndexOf(temp)]}");
             }
+
+            Console.WriteLine(@"the max temperature over the simulated days is: "+temperature.Max()+"°C");
+            Console.WriteLine(@"the min temperature over the simulated days is: "+temperature.Min()+"°C");
             double averageTemp=getavg(temperature);
             Console.WriteLine(@"the average temperature over the simulated days is: "+averageTemp+"°C");
         }   
